@@ -9,9 +9,6 @@ class TestTwitterPipelining(unittest.TestCase):
         cls.NUM_OF_COPIES = 100
         ray.init()
 
-    def setUp(self):
-        self.NUM_OF_COPIES = 100
-
     def test_pipelining_without_ray(self):
         # Read json file
         tweets = data_cleaning.read_tweet_json_file()
